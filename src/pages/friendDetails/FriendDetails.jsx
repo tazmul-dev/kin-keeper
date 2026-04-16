@@ -63,7 +63,7 @@ const FriendDetails = () => {
           const now = new Date();
         let video = {
              name: name,
-            type:"video",
+            type:"Video",
             image:"https://i.ibb.co.com/bMB6ytvS/video.png",
             date: now.toLocaleDateString("en-US"),
         }
