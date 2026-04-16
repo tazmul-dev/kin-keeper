@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router';
 
-const Card = ({friend}) => {
+const NewCard = ({friend}) =>{
    const {name, picture, days_since_contact, status, tags} = friend
+    
     let statu = ""
 
     if(status.includes("on-track")){
@@ -35,4 +36,5 @@ const Card = ({friend}) => {
     );
 };
 
-export default Card;
+
+export default NewCard;

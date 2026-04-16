@@ -1,8 +1,11 @@
-import React from 'react';
+
+import { useContext } from 'react';
 import { MdOutlineNotificationsPaused } from 'react-icons/md';
 import { PiArchiveBold } from 'react-icons/pi';
 import { RiDeleteBinLine } from 'react-icons/ri';
 import { useLoaderData, useParams } from 'react-router';
+import { FriendContext } from '../../context/Context';
+
 
 const FriendDetails = () => {
     const { id } = useParams()
@@ -24,12 +27,50 @@ const FriendDetails = () => {
 
     }
   
+    const {datas, setData} = useContext(FriendContext)
+    
+   
+    //  setData(prev => [...prev, ...call])
+
     const handelText = ()=>{
-       let call ={
+        const now = new Date();
+      let text ={
+
+        type: "Text",
         name: name,
+        date: now.toLocaleDateString("en-US"),
+        image:"https://i.ibb.co.com/27WFqgrf/text.png"
+        
        }
-       console.log(call)
+        setData( [...datas, text])
+
     }
+    
+    const handelCall = ()=>{
+          const now = new Date();
+        let call ={
+             name: name,
+            type: "Call",
+            image:"https://i.ibb.co.com/pvf1R6wC/call.png",
+            date: now.toLocaleDateString("en-US"),
+           
+        }
+
+        setData([...datas, call])
+    }
+
+    const handelVideo = ()=>{
+          const now = new Date();
+        let video = {
+             name: name,
+            type:"video",
+            image:"https://i.ibb.co.com/bMB6ytvS/video.png",
+            date: now.toLocaleDateString("en-US"),
+        }
+
+        setData( [...datas, video])
+    }
+
 
     return (
         <div className='grid grid-cols-5 gap-4 max-w-285 mx-auto pb-5'>
@@ -103,15 +144,15 @@ const FriendDetails = () => {
                     <h2 className='mb-8'>Quick Check-In</h2>
 
                     <div className='grid grid-cols-3 gap-4'>
-                        <button onClick={handelText} className='flex flex-col items-center shadow p-6 cursor-pointer bg-[#F8FAFC]'>
+                        <button onClick={handelCall} className='flex flex-col items-center shadow p-6 cursor-pointer bg-[#F8FAFC]'>
                           <img className='w-6' src="/image/call.png" alt="" />
                           <p className='mt-4'>Call</p>
                         </button>
-                        <button className='flex flex-col items-center p-6 cursor-pointer bg-[#F8FAFC] shadow'>
+                        <button onClick={handelText} className='flex flex-col items-center p-6 cursor-pointer bg-[#F8FAFC] shadow'>
                           <img className='w-6' src="/image/text.png" alt="" />
                           <p className='mt-4'>Text</p>
                         </button>
-                        <button className='flex flex-col items-center p-6 cursor-pointer bg-[#F8FAFC] shadow'>
+                        <button onClick={handelVideo} className='flex flex-col items-center p-6 cursor-pointer bg-[#F8FAFC] shadow'>
                           <img className='w-6' src="/image/video.png" alt="" />
                           <p className='mt-4'>Video</p>
                         </button>

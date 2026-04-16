@@ -9,6 +9,8 @@ import HomePage from './pages/homePage/HomePage.jsx';
 import TimelinePage from './pages/timeline/TimelinePage.jsx';
 import StatsPage from './pages/statsPage/StatsPage.jsx';
 import FriendDetails from './pages/friendDetails/FriendDetails.jsx';
+import Context from './context/Context.jsx';
+
 
 const router = createBrowserRouter([
   {
@@ -28,12 +30,7 @@ const router = createBrowserRouter([
       {
         path:'/timeline',
         Component: TimelinePage,
-        children:[
-          {
-            index: true,
-            
-          }
-        ]
+       
       },
       {
         path:'/stats',
@@ -46,6 +43,11 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router}></RouterProvider>
-  </StrictMode>,
+    <Context>
+   <RouterProvider router={router}></RouterProvider>
+    </Context>
+    
+   
+    
+  </StrictMode>
 )
