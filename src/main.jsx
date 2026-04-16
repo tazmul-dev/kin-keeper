@@ -27,8 +27,13 @@ const router = createBrowserRouter([
       },
       {
         path:'/timeline',
-        Component: TimelinePage
-
+        Component: TimelinePage,
+        children:[
+          {
+            index: true,
+            
+          }
+        ]
       },
       {
         path:'/stats',
