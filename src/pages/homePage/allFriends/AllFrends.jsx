@@ -3,12 +3,12 @@ import Card from '../../../card/Card';
 
 const AllFrends = ({ friendsPromis }) => {
     const friends = use(friendsPromis)
-    console.log(friends)
+    // console.log(friends)
     return (
         <div>
-            <h1 className='my-10px font-bold'>Your Friends</h1>
+            <h1 className='my-10px font-bold mb-4'>Your Friends</h1>
 
-            <div>
+            <div className='grid lg:grid-cols-4 gap-5'>
                 {
                     friends.map((friend) => <Card key={friend.id} friend ={friend}></Card> )
                 }
