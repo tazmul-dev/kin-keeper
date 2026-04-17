@@ -1,16 +1,34 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+Project name: Keen Keeper;
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+used Technologies:
 
-## React Compiler
+1. react.js
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+2. react router
 
-## Expanding the ESLint configuration
+3. Rechart
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+4. tailwind css,
+
+3 key features of my project:
+
+1. my project has frends cards. when clicked friends cards that showing friends details cards.
+
+2. friend details card has 3 button call, text, video. when buttons clicked go to timeline page and current dates.
+
+3. in stats use rechart for counts data like call , text, video
+
+
+description:
+
+This is my simple a project. its used technolgy react.js and react router. it's project has 
+
+three page, home , timeline and stats.
+
+home page has friends cards. when clicked card show details page of frieds. details page has about priend details and opertunity give call, text , and video call.
+
+timeline page has entry call, text , video call data. if you went to can filtering.
+
+

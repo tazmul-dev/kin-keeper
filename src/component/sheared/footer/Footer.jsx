@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer = () => {
     return (
-        <div className='bg-[#244D3F] text-white max-w-full pt-20 pb-10'>
+        <div className='bg-[#244D3F] text-white max-w-full pt-20 mt-10 pb-10'>
             
             <div className='main-div max-w-11/12 mx-auto'>
            
@@ -25,7 +25,7 @@ const Footer = () => {
 
             {/* footer */}
          
-            <div className=' flex flex-col items-center gap-5 sm:justify-between text-gray-300 pt-10'>
+            <div className=' flex flex-col items-center gap-5 md:flex-row justify-between text-gray-300 pt-10'>
                 <p>© 2026 KeenKeeper. All rights reserved.</p>
                 <ul className='flex gap-8 '>
                     <li> Privacy Policy</li>
