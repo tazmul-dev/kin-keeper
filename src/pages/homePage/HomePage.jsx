@@ -6,7 +6,7 @@ const HomePage = () => {
     return (
         <div className=' max-w-11/12 mx-auto pb-10'>  
            <Hero></Hero>
-           <Suspense fallback ={<h1>loding ....</h1>}>
+           <Suspense fallback ={<span className="loading loading-spinner loading-md"></span>}>
             <AllFrends friendsPromis={friendsPromis}></AllFrends>
            </Suspense>
 

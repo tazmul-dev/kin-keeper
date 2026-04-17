@@ -11,6 +11,7 @@ import StatsPage from './pages/statsPage/StatsPage.jsx';
 import FriendDetails from './pages/friendDetails/FriendDetails.jsx';
 import Context from './context/Context.jsx';
 import { ToastContainer } from 'react-toastify';
+import ErrorPage from './component/ErrorPage/ErrorPage.jsx';
 
 
 
@@ -39,7 +40,8 @@ const router = createBrowserRouter([
         Component:StatsPage
       }
       
-    ]
+    ],
+    errorElement: <ErrorPage></ErrorPage>
 }
 ])
 
