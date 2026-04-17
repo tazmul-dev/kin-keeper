@@ -7,7 +7,7 @@ const TimelinePage = () => {
 
     return (
         <div className='max-w-11/12 mx-auto'>
-            <h1>This is time line page</h1>
+            <h1 className='font-bold text-5xl mt-6'>This is time line page</h1>
             <div className="dropdown dropdown-bottom">
                 <div tabIndex={0} role="button" className="btn m-1"><button onClick={()=>setSort('all')}>Filter timeline ⬇️</button></div>
                 <ul tabIndex="-1" className="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">

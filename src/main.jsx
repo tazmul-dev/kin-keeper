@@ -10,6 +10,8 @@ import TimelinePage from './pages/timeline/TimelinePage.jsx';
 import StatsPage from './pages/statsPage/StatsPage.jsx';
 import FriendDetails from './pages/friendDetails/FriendDetails.jsx';
 import Context from './context/Context.jsx';
+import { ToastContainer } from 'react-toastify';
+
 
 
 const router = createBrowserRouter([
@@ -43,8 +45,11 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
+
     <Context>
-   <RouterProvider router={router}></RouterProvider>
+   <RouterProvider router={router}>
+   </RouterProvider>
+   <ToastContainer></ToastContainer>
     </Context>
     
    

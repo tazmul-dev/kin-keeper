@@ -5,6 +5,7 @@ import { PiArchiveBold } from 'react-icons/pi';
 import { RiDeleteBinLine } from 'react-icons/ri';
 import { useLoaderData, useParams } from 'react-router';
 import { FriendContext } from '../../context/Context';
+import { toast } from 'react-toastify';
 
 
 const FriendDetails = () => {
@@ -33,6 +34,8 @@ const FriendDetails = () => {
     //  setData(prev => [...prev, ...call])
 
     const handelText = ()=>{
+
+        toast.success('success send text')
         const now = new Date();
       let text ={
 
@@ -42,11 +45,13 @@ const FriendDetails = () => {
         image:"https://i.ibb.co.com/27WFqgrf/text.png"
         
        }
+        
         setData( [...datas, text])
 
     }
     
     const handelCall = ()=>{
+      toast.success('success call')
           const now = new Date();
         let call ={
              name: name,
@@ -55,11 +60,12 @@ const FriendDetails = () => {
             date: now.toLocaleDateString("en-US"),
            
         }
-
+          
         setData([...datas, call])
     }
 
     const handelVideo = ()=>{
+         toast.success('success video call')
           const now = new Date();
         let video = {
              name: name,
@@ -67,6 +73,7 @@ const FriendDetails = () => {
             image:"https://i.ibb.co.com/bMB6ytvS/video.png",
             date: now.toLocaleDateString("en-US"),
         }
+       
 
         setData( [...datas, video])
     }
